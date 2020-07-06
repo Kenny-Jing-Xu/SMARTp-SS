@@ -1,0 +1,94 @@
+<!--
+Copyright 2020 Xu J. and Bandyopadhyay D.
+This file is part of SMARTp-SS Calculator.
+SMARTp-SS Calculator is free software: you can redistribute it and/or modify
+it under the terms of the GNU Affero General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+SMARTp-SS Calculator is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU Affero General Public License for more details.
+You should have received a copy of the GNU Affero General Public License
+along with SMARTp-SS Calculator.  If not, see <http://www.gnu.org/licenses/>.
+Contact the author at kenny.xu@duke-nus.edu.sg
+-->
+
+<style>
+    ol {padding-left: 30px;}
+    ul {padding-left: 15px;}
+</style>
+
+<h3>Purpose</h3>
+<p>This applet provides a sample size calculator for sequential multiple assignment randomized trial for periodontitis (SMARTp).</p>
+
+<h3>The SMARTp Design</h3>
+<p>A sequential multiple assignment randomized trial (SMART) design schematic diagram for developing dynamic treatment regimes (DTRs) 
+for treating chronic periodontitis is represented on the right hand side. We have 'R' stands for randomization, and interventions '1' to '8' present oral
+hygiene instruction, education on risk reduction, scaling and root planing (SRP), SRP with local antimicrobial therapy, SRP with systemic
+antimicrobial therapy, SRP with photodynamic therapy, SRP with systemic subantimicrobial-dose doxycycline (SDD) and laser therapy respectively.</p>
+
+At the beginning of the trial, each participant has to attend the treatments 1 and 2 before randomization. At the initial stage, each participant is randomly
+allocated to either treatment 3 or 8. The patients who respond to the initial treatment continue the same treatment at the second stage
+of the trial. The patients who do not respond to the initial treatment are randomly allocated to one of the treatments 4-7 in the second stage. 
+The possible treatment paths are listed below.
+<ul>
+    <li>Path 1: 1, 2, 3, 3 </li>
+    <li>Path 2: 1, 2, 3, 4</li>
+    <li>Path 3: 1, 2, 3, 5</li>
+    <li>Path 4: 1, 2, 3, 6</li>
+    <li>Path 5: 1, 2, 3, 7</li>
+    <li>Path 6: 1, 2, 8, 8</li>
+    <li>Path 7: 1, 2, 8, 4</li>
+    <li>Path 8: 1, 2, 8, 5</li>
+    <li>Path 9: 1, 2, 8, 6</li>
+    <li>Path 10: 1, 2, 8, 7</li>
+</ul> 
+This leads to eight different DTRs (<math>d<sub>1</sub>-d<sub>8</sub></math> ), which are,
+<ul>
+<li> <math>d<sub>1</sub>: 1, 2, 3, <math>3<sup>Response</sup> or 4<sup>Non-Response</sup></math> </li>
+<li> <math>d<sub>2</sub>: 1, 2, 3, <math>3<sup>Response</sup> or 5<sup>Non-Response</sup></math> </li>
+<li> <math>d<sub>3</sub>: 1, 2, 3, <math>3<sup>Response</sup> or 6<sup>Non-Response</sup></math> </li>
+<li> <math>d<sub>4</sub>: 1, 2, 3, <math>3<sup>Response</sup> or 7<sup>Non-Response</sup></math> </li>
+<li> <math>d<sub>5</sub>: 1, 2, 3, <math>8<sup>Response</sup> or 4<sup>Non-Response</sup></math> </li>
+<li> <math>d<sub>6</sub>: 1, 2, 3, <math>8<sup>Response</sup> or 5<sup>Non-Response</sup></math> </li>
+<li> <math>d<sub>7</sub>: 1, 2, 3, <math>8<sup>Response</sup> or 6<sup>Non-Response</sup></math> </li>
+<li> <math>d<sub>8</sub>: 1, 2, 3, <math>8<sup>Response</sup> or 7<sup>Non-Response</sup></math> </li>
+</ul> 
+
+<h3>Required Inputs</h3>
+<ul>
+<li>The responding rate of treatments 3 (<math>&gamma;<sup>d<sub>1</sub></sup></math>) and 8 (<math>&gamma;<sup>d<sub>5</sub></sup></math>) at stage-1</li>
+<li>The variation (<math>&tau;</math>) and spatial association (<math>&rho;</math>) parameters of the covariance matrix with 
+    a conditional autoregressive (CAR) structure for the latent vector <math><b>Q</b><sub>i</sub></math></li>
+<li>The mean parameter <math>&mu;<sub>i</sub></math> at different treatment paths</li>
+<li>The scale (<math>&sigma;<sub>1</sub></math>) and skewness (<math>&lambda;</math>) parameters, and the degrees of freedom (<math>&nu;</math>) of the error term for the CAL regression model</li>
+<li>The scale (<math>&sigma;<sub>0</sub></math>) parameter of the error term for the missingness regression model</li>
+<li>The intercept (<math>a<sub>0</sub></math>) and slope (<math>b<sub>0</sub></math>) parameters for the missingness regression model or</li>
+<li>The proportion of available teeth (<math>p<sub>i</sub></math>) and the Pearson correlation coefficient between (<math>c<sub>i</sub></math>) for each patient</li>
+<li>The hypothesis test, i.e. detecting a single regime, comparising two regimes or testing one regime is better than the rest</li>
+<li>The type-I error (<math>&alpha;</math>) rate and power (P) </li>
+</ul>
+
+<h3>Possible Output</h3>
+            <p> Sample Size </p>
+            
+
+<h3>Reference</h3>
+    <p> Xu, J., Bandyopadhyay, D., Mirzaeic, S., Michalowicz, B. and Chakraborty, B. (2020). SMARTp: A SMART design for non-surgical treatments of chronic periodontitis with spatially-referenced and
+non-randomly missing skewed outcome. Biometrical Journal, 62, 282-310. </p>
+
+<h3>Source Code</h3>
+    <p>Source code for this application is available on <a href="https://github.com/Kenny-Jing-Xu/SMARTp-SS">GitHub</a>.</p>
+
+<script>
+$(document).ready(function(){
+  $("#background").on("hide.bs.collapse", function(){
+    $("#backgroundtitle").html('<span class="glyphicon glyphicon-collapse-down" style="font-size: 80%;"></span> <span style="font-size: 20px;">Additional Background Information</span>');
+  });
+  $("#background").on("show.bs.collapse", function(){
+    $("#backgroundtitle").html('<span class="glyphicon glyphicon-collapse-up" style="font-size: 80%;"></span> <span style="font-size: 20px;">Additional Background Information</span>');
+  });
+});
+</script>
+
