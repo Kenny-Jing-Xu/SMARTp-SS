@@ -44,30 +44,30 @@ The possible treatment paths are listed below.
     <li>Path 9: 1, 2, 8, 6</li>
     <li>Path 10: 1, 2, 8, 7</li>
 </ul> 
-This leads to eight different DTRs (<math>d<sub>1</sub>-d<sub>8</sub></math> ), which are,
+This leads to eight different DTRs (d<sub>1</sub>-d<sub>8</sub> ), which are,
 <ul>
-<li> <math>d<sub>1</sub>: 1, 2, 3, <math>3<sup>Response</sup> or 4<sup>Non-Response</sup></math> </li>
-<li> <math>d<sub>2</sub>: 1, 2, 3, <math>3<sup>Response</sup> or 5<sup>Non-Response</sup></math> </li>
-<li> <math>d<sub>3</sub>: 1, 2, 3, <math>3<sup>Response</sup> or 6<sup>Non-Response</sup></math> </li>
-<li> <math>d<sub>4</sub>: 1, 2, 3, <math>3<sup>Response</sup> or 7<sup>Non-Response</sup></math> </li>
-<li> <math>d<sub>5</sub>: 1, 2, 3, <math>8<sup>Response</sup> or 4<sup>Non-Response</sup></math> </li>
-<li> <math>d<sub>6</sub>: 1, 2, 3, <math>8<sup>Response</sup> or 5<sup>Non-Response</sup></math> </li>
-<li> <math>d<sub>7</sub>: 1, 2, 3, <math>8<sup>Response</sup> or 6<sup>Non-Response</sup></math> </li>
-<li> <math>d<sub>8</sub>: 1, 2, 3, <math>8<sup>Response</sup> or 7<sup>Non-Response</sup></math> </li>
+<li> d<sub>1</sub>: 1, 2, 3, 3<sup>Response</sup> or 4<sup>Non-Response</sup> </li>
+<li> d<sub>2</sub>: 1, 2, 3, 3<sup>Response</sup> or 5<sup>Non-Response</sup> </li>
+<li> d<sub>3</sub>: 1, 2, 3, 3<sup>Response</sup> or 6<sup>Non-Response</sup> </li>
+<li> d<sub>4</sub>: 1, 2, 3, 3<sup>Response</sup> or 7<sup>Non-Response</sup> </li>
+<li> d<sub>5</sub>: 1, 2, 8, 8<sup>Response</sup> or 4<sup>Non-Response</sup> </li>
+<li> d<sub>6</sub>: 1, 2, 8, 8<sup>Response</sup> or 5<sup>Non-Response</sup> </li>
+<li> d<sub>7</sub>: 1, 2, 8, 8<sup>Response</sup> or 6<sup>Non-Response</sup> </li>
+<li> d<sub>8</sub>: 1, 2, 8, 8<sup>Response</sup> or 7<sup>Non-Response</sup> </li>
 </ul> 
 
 <h3>Required Inputs</h3>
 <ul>
-<li>The responding rate of treatments 3 (<math>&gamma;<sup>d<sub>1</sub></sup></math>) and 8 (<math>&gamma;<sup>d<sub>5</sub></sup></math>) at stage-1</li>
-<li>The variation (<math>&tau;</math>) and spatial association (<math>&rho;</math>) parameters of the covariance matrix with 
-    a conditional autoregressive (CAR) structure for the latent vector <math><b>Q</b><sub>i</sub></math></li>
-<li>The mean parameter <math>&mu;<sub>i</sub></math> at different treatment paths</li>
-<li>The scale (<math>&sigma;<sub>1</sub></math>) and skewness (<math>&lambda;</math>) parameters, and the degrees of freedom (<math>&nu;</math>) of the error term for the CAL regression model</li>
-<li>The scale (<math>&sigma;<sub>0</sub></math>) parameter of the error term for the missingness regression model</li>
-<li>The intercept (<math>a<sub>0</sub></math>) and slope (<math>b<sub>0</sub></math>) parameters for the missingness regression model or</li>
-<li>The proportion of available teeth (<math>p<sub>i</sub></math>) and the Pearson correlation coefficient between (<math>c<sub>i</sub></math>) for each patient</li>
+<li>The responding rate of treatments 3 (&gamma;<sup>d<sub>1</sub></sup>) and 8 (&gamma;<sup>d<sub>5</sub></sup>) at stage-1</li>
+<li>The variation (&tau;) and spatial association (&rho;) parameters of the covariance matrix with 
+    a conditional autoregressive (CAR) structure for the latent vector <b>Q</b><sub>i</sub></li>
+<li>The mean parameter &mu;<sub>i</sub> at different treatment paths</li>
+<li>The scale (&sigma;<sub>1</sub>) and skewness (&lambda;) parameters, and the degrees of freedom (&nu;) of the error term for the CAL regression model</li>
+<li>The scale (&sigma;<sub>0</sub>) parameter of the error term for the missingness regression model</li>
+<li>The intercept (a<sub>0</sub>) and slope (b<sub>0</sub>) parameters for the missingness regression model or</li>
+<li>The proportion of available teeth (p<sub>i</sub>) and the Pearson correlation coefficient between (c<sub>i</sub>) for each patient</li>
 <li>The hypothesis test, i.e. detecting a single regime, comparising two regimes or testing one regime is better than the rest</li>
-<li>The type-I error (<math>&alpha;</math>) rate and power (P) </li>
+<li>The type-I error (&alpha;) rate and power (P) </li>
 </ul>
 
 <h3>Possible Output</h3>
