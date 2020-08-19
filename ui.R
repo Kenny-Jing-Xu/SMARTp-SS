@@ -81,11 +81,11 @@ shinyUI(
           numericInput(inputId="mu3", label =HTML( paste0( "Treatment 3 at stage-1 and treatment 5 at stage-2" ) ), value=0),
           numericInput(inputId="mu4", label =HTML( paste0( "Treatment 3 at stage-1 and treatment 6 at stage-2" ) ), value=0),
           numericInput(inputId="mu5", label =HTML( paste0( "Treatment 3 at stage-1 and treatment 7 at stage-2" ) ), value=0),
-          numericInput(inputId="mu6", label =HTML( paste0( "Treatment 3 at stage-1 and treatment 3 at stage-2" ) ), value=0),
-          numericInput(inputId="mu7", label =HTML( paste0( "Treatment 3 at stage-1 and treatment 4 at stage-2" ) ), value=0),
-          numericInput(inputId="mu8", label =HTML( paste0( "Treatment 3 at stage-1 and treatment 5 at stage-2" ) ), value=0),
-          numericInput(inputId="mu9", label =HTML( paste0( "Treatment 3 at stage-1 and treatment 7 at stage-2" ) ), value=0),
-          numericInput(inputId="mu10", label =HTML( paste0( "Treatment 3 at stage-1 and treatment 8 at stage-2" ) ), value=0)
+          numericInput(inputId="mu6", label =HTML( paste0( "Treatment 8 at stage-1 and treatment 8 at stage-2" ) ), value=0),
+          numericInput(inputId="mu7", label =HTML( paste0( "Treatment 8 at stage-1 and treatment 4 at stage-2" ) ), value=0),
+          numericInput(inputId="mu8", label =HTML( paste0( "Treatment 8 at stage-1 and treatment 5 at stage-2" ) ), value=0),
+          numericInput(inputId="mu9", label =HTML( paste0( "Treatment 8 at stage-1 and treatment 6 at stage-2" ) ), value=0),
+          numericInput(inputId="mu10", label =HTML( paste0( "Treatment 8 at stage-1 and treatment 7 at stage-2" ) ), value=0)
         ),
         verticalLayout(
           HTML(paste0(
