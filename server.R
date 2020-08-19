@@ -107,7 +107,7 @@ shinyServer(
                                           pow = pow, a = a,
                                           rho = rho, tau = tau,
                                           sigma1 = sigma1, lambda = lambda, nu = nu, sigma0 = sigma0,
-                                          Num = 1e+6, 
+                                          Num = 1e+5, 
                                           p_i = , c_i = , a0 = a0, b0 = b0,
                                           cutoff = 0
                                           )
@@ -123,7 +123,7 @@ shinyServer(
                                           pow = pow, a = a,
                                           rho = rho, tau = tau,
                                           sigma1 = sigma1, lambda = lambda, nu = nu, sigma0 = sigma0,
-                                          Num = 1e+6, 
+                                          Num = 1e+5, 
                                           p_i = p_i, c_i = c_i, a0 = , b0 = ,
                                           cutoff = 0
           )
